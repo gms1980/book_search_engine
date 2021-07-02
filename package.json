@@ -3,36 +3,33 @@
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "concurrently \"cd server && npm start\" \"cd client && npm start\"",
+    "start1": "node server/server.js",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
-    "build": "cd client && npm run build"
+    "build": "cd client && npm run build",
+    "test": "echo $HOME"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^5.3.0",
-    "eslint-plugin-react": "^7.24.0"
+    "concurrently": "^5.3.0"
   },
   "dependencies": {
     "@apollo/client": "^3.3.20",
     "@apollo/react-hooks": "^4.0.0",
     "apollo-boost": "^0.4.9",
-    "develop": "^1.0.0",
+    "bcrypt": "^5.0.1",
     "express": "^4.17.1",
     "express-graphql": "^0.12.0",
     "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^3.1.2",
     "mongodb": "^3.6.9",
-    "mongoose": "^5.12.15",
+    "mongoose": "^5.12.14",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",
-    "react-dom": "^17.0.2",
-    "react-router-dom": "^5.2.0",
-    "scripts": "^0.1.0",
-    "seed": "^0.4.4",
-    "source-map-explorer": "^2.5.2"
+    "seed": "^0.4.4"
   },
   "repository": {
     "type": "git",

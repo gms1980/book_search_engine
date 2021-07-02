@@ -1,5 +1,5 @@
   
-import gql from 'graphql-tag';
+import { gql } from 'graphql-tag';
 
 
 export const GET_ME = gql`
@@ -10,7 +10,7 @@ export const GET_ME = gql`
       email
       bookCount
       savedBooks {
-        # _id
+        _id
         bookId
         authors
         image
